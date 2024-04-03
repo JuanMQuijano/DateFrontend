@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useEffect, useState } from "react"
 import Swal from "sweetalert2"
 
@@ -43,12 +44,25 @@ function App() {
     return
   }
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+
+    e.preventDefault()
 
     try {
+      const { data } = await axios.post(import.meta.env.VITE_BACK, form);
 
+      Swal.fire(data.msg + ", ya puedes cerrar la página")
+
+      setIterador(0)
+      setMsg("¡Hola Li!")
+      setEnabledButton(false);
+
+      setButtonsVisibility(false);
+      setFormVisibility(false);
+
+      setForm({ opt: "", date: "" });
     } catch (error) {
-
+      console.log(error);
     }
 
   }
@@ -69,7 +83,7 @@ function App() {
       )}
 
       {formVisibility && (
-        <form className="flex flex-col gap-2">
+        <form className="flex flex-col gap-2" onSubmit={handleSubmit}>
 
           <h1 className="text-lg font-bold">Eres libre de elegir lo que te gustaría cenar</h1>
 
