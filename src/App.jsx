@@ -91,21 +91,21 @@ function App() {
 
             <div className="flex flex-col">
               <label htmlFor="opt1">
-                <img src="./public/hambu.webp" alt="Imagen Opt 1" />
+                <img src="./hambu.webp" alt="Imagen Opt 1" />
               </label>
               <input type="radio" name="opt" id="opt1" value="hambu" onChange={handleChange} />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="opt2">
-                <img src="./public/pasta.jpeg" alt="Imagen Opt 2" />
+                <img src="./pasta.jpeg" alt="Imagen Opt 2" />
               </label>
               <input type="radio" name="opt" id="opt2" value="pasta" onChange={handleChange} />
             </div>
 
             <div className="flex flex-col">
               <label htmlFor="opt3">
-                <img src="./public/pizza.webp" alt="Imagen Opt 3"
+                <img src="./pizza.webp" alt="Imagen Opt 3"
                 />
               </label>
               <input type="radio" name="opt" id="opt3" value="pizza" onChange={handleChange} />
@@ -113,7 +113,7 @@ function App() {
 
             <div className="flex flex-col">
               <label htmlFor="opt4">
-                <img src="./public/tacos.webp" alt="Imagen Opt 4" />
+                <img src="./tacos.webp" alt="Imagen Opt 4" />
               </label>
               <input type="radio" name="opt" id="opt4" value="tacos" onChange={handleChange} />
             </div>
