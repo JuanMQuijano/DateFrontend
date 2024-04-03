@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Dancing Script", cursive;
+}
+
+.bg {
+  background: rgb(223, 159, 159);
+  background: linear-gradient(
+    90deg,
+    rgba(223, 159, 159, 1) 17%,
+    rgba(255, 56, 222, 1) 100%
+  );
+}
